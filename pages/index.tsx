@@ -26,6 +26,9 @@ import { FaXTwitter } from "react-icons/fa6";
 import { useState } from "react";
 import { s } from "motion/react-client";
 
+// Snow Effect
+import type { NextPage } from 'next';
+import SnowEffect from '../components/SnowEffect';
 
 export default function Home() {
   //function
@@ -43,12 +46,13 @@ export default function Home() {
         </style>
       </Head>
 
-        <main className="min-h-screen px-10 font-poppins bg-yellow-50 md:px-20 lg-px-40 dark:bg-gray-900">
+        <main className="min-h-screen px-10 bg-gray-100 font-poppins md:px-20 lg-px-40 dark:bg-gray-900">
+        <SnowEffect snowflakeCount={20} />
           {/* nav and hero */}
           <section>
             {/* nav */}
             <nav className="flex justify-between py-10">
-              <h1 className="text-sm  md:text-xl dark:text-white">Developed by Sadew</h1>
+              <h1 className="text-sm md:text-xl dark:text-white">Developed by Sadew</h1>
               <ul className="flex items-center ">
                 {/* icon */}
                 <li>
@@ -64,8 +68,8 @@ export default function Home() {
               </li>
                 <li>
                   <a
-                  href=" "
-                  className="px-4 py-2 text-white bg-black border-none rounded-md  dark:text-black dark:bg-white"
+                  href="https://youtube.com/@sadewanuhas./"
+                  className="px-4 py-2 text-white bg-black border-none rounded-md dark:text-black dark:bg-white"
                   >Subscribe</a>
                 </li>
               </ul>
@@ -73,8 +77,8 @@ export default function Home() {
 
             {/* hero */}
             <div className="p-10 text-center">
-              <h1 className="text-5xl font-bold text-yellow-400 md:text-6xl lg:text-7xl lg:mb-4">Sadew Anuhas</h1>
-              <h3 className="py-4 text-2xl  md:text-3xl dark:text-white">Web Designer & Developer</h3>
+              <h1 className="text-5xl font-bold text-gray-800 dark:text-white md:text-6xl lg:text-7xl lg:mb-4">Sadew Anuhas</h1>
+              <h3 className="py-4 text-2xl md:text-3xl dark:text-white">Web Designer & Developer</h3>
               <p className="max-w-xl mx-auto leading-6 text-gray-400 font-sm md:text-md">A versatile creative professional with over 5 years of experience in Graphic Design, Web Design, UI/UX, Video Editing, and Full-Stack Development. I specialize in crafting visually stunning and user-friendly digital experiences that bring ideas to life.</p>
             </div>
             {/* socials */}
@@ -95,7 +99,7 @@ export default function Home() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
             >
-              <div className="relative p-5 m-auto mt-20 rounded-full  bg-gradient-to-b from-yellow-200 w-80 h-80">
+              <div className="relative p-5 m-auto mt-20 rounded-full bg-gradient-to-b from-gray-200 w-80 h-80 dark:bg-gradient-to-b from-black">
                <Image src={profileImage}
                alt="profile image"
                layout="fill"
@@ -106,26 +110,26 @@ export default function Home() {
           {/* services */}
           <section>
             <div>
-              <h2 className="py-2 text-5xl font-bold  opacity-60 dark:text-white">Services I Offer</h2>
+              <h2 className="py-2 text-5xl font-bold opacity-60 dark:text-white">Services I Offer</h2>
               <p className="leading-6 text-gray-400 font-sm dark:text-white">I provide high-quality, tailored solutions to meet your unique needs, combining creativity, technical expertise, and a passion for excellence.</p>
             </div>
 
             {/* Services Cards */}
-            <div className="gap-10 mx-auto  md:flex lg:flex">
+            <div className="gap-10 mx-auto md:flex lg:flex">
               {/* card */}
               <motion.div
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               >
-              <div className="p-5 my-10 text-center bg-yellow-300 shadow-sm  rounded-xl">
+              <div className="p-5 my-10 text-center bg-gray-800 shadow-sm rounded-xl">
                 <Image src={graphicDesign}
                 alt="design image"
                 width={100}
                 height={100}
                 className="inline "
                 />
-                <h2 className="text-2xl font-bold ">Graphic Design</h2>
-                <p className="py-2 text-sm leading-6 text-gray-800 ">Elevate your brand with striking logos, brochures, and social media designs that drive engagement.</p>
+                <h2 className="text-2xl font-bold text-gray-200">Graphic Design</h2>
+                <p className="py-2 text-sm leading-6 text-white ">Elevate your brand with striking logos, brochures, and social media designs that drive engagement.</p>
               </div>
               </motion.div>
 
@@ -134,15 +138,15 @@ export default function Home() {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               >
-              <div className="p-5 my-10 text-center bg-yellow-300 shadow-sm  rounded-xl">
+              <div className="p-5 my-10 text-center bg-gray-800 shadow-sm rounded-xl">
                 <Image src={codeImage}
                 alt="code image"
                 width={100}
                 height={100}
                 className="inline "
                 />
-                <h2 className="text-2xl font-bold ">Web Design</h2>
-                <p className="py-2 text-sm leading-6 text-gray-800 ">Build responsive, custom Websites tailored to your brand and goals.</p>
+                <h2 className="text-2xl font-bold text-gray-200 ">Web Design</h2>
+                <p className="py-2 text-sm leading-6 text-white ">Build responsive, custom Websites tailored to your brand and goals.</p>
               </div>
               </motion.div>
 
@@ -151,15 +155,15 @@ export default function Home() {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               >
-              <div className="p-5 my-10 text-center bg-yellow-300 shadow-sm  rounded-xl">
+              <div className="p-5 my-10 text-center bg-gray-800 shadow-sm rounded-xl">
                 <Image src={graphicDesign}
                 alt="design image"
                 width={100}
                 height={100}
                 className="inline "
                 />
-                <h2 className="text-2xl font-bold ">UI/UX Design</h2>
-                <p className="py-2 text-sm leading-6 text-gray-800 ">Design intuitive, engaging UI/UX with Figma for web and mobile apps.</p>
+                <h2 className="text-2xl font-bold text-gray-200">UI/UX Design</h2>
+                <p className="py-2 text-sm leading-6 text-white ">Design intuitive, engaging UI/UX with Figma for web and mobile apps.</p>
               </div>
               </motion.div>
             </div>
@@ -168,12 +172,12 @@ export default function Home() {
           {/* my work */}
           <section>
             <div>
-              <h2 className="py-2 text-5xl font-bold  opacity-60 dark:text-white">Portfolio</h2>
+              <h2 className="py-2 text-5xl font-bold opacity-60 dark:text-white">Portfolio</h2>
               <p className="leading-6 text-gray-400 font-sm dark:text-white">Explore a curated collection of my previous projects showcasing my design and development expertise, delivering creative solutions tailored to my clients' goals.</p>
             </div>
             {/* images */}
-            <div className="flex flex-col gap-10 p-10  lg:flex-row lg:flex-wrap">
-              <div className="flex-1  basis-1/3">
+            <div className="flex flex-col gap-10 p-10 lg:flex-row lg:flex-wrap">
+              <div className="flex-1 basis-1/3">
               <motion.div
               whileHover={{scale: 1.1, rotate: 3 }}
               whileTap={{ scale: 0.8, rotate: -10, borderRadius: "100%" }}
@@ -186,7 +190,7 @@ export default function Home() {
                 />
               </motion.div>
               </div>
-              <div className="flex-1  basis-1/3">
+              <div className="flex-1 basis-1/3">
               <motion.div
               whileHover={{scale: 1.1, rotate: 3 }}
               whileTap={{ scale: 0.8, rotate: -10, borderRadius: "100%" }}
@@ -199,33 +203,20 @@ export default function Home() {
                 />
               </motion.div>
               </div>
-              <div className="flex-1  basis-1/3">
+              <div className="flex-1 basis-1/3">
               <motion.div
               whileHover={{scale: 1.1, rotate: 3 }}
               whileTap={{ scale: 0.8, rotate: -10, borderRadius: "100%" }}
               >
                 <Image
-                src={image1}
+                src={image2}
                 alt="image 1"
                 layout="responsive"
                 className="object-cover rounded-lg "
                 />
                 </motion.div>
               </div>
-              <div className="flex-1  basis-1/3">
-              <motion.div
-              whileHover={{scale: 1.1, rotate: 3 }}
-              whileTap={{ scale: 0.8, rotate: -10, borderRadius: "100%" }}
-              >
-                <Image
-                src={image2}
-                alt="image 1"
-                layout="responsive"
-                className="object-cover rounded-lg "
-                />
-              </motion.div>
-              </div>
-              <div className="flex-1  basis-1/3">
+              <div className="flex-1 basis-1/3">
               <motion.div
               whileHover={{scale: 1.1, rotate: 3 }}
               whileTap={{ scale: 0.8, rotate: -10, borderRadius: "100%" }}
@@ -238,7 +229,20 @@ export default function Home() {
                 />
               </motion.div>
               </div>
-              <div className="flex-1  basis-1/3">
+              <div className="flex-1 basis-1/3">
+              <motion.div
+              whileHover={{scale: 1.1, rotate: 3 }}
+              whileTap={{ scale: 0.8, rotate: -10, borderRadius: "100%" }}
+              >
+                <Image
+                src={image3}
+                alt="image 1"
+                layout="responsive"
+                className="object-cover rounded-lg "
+                />
+              </motion.div>
+              </div>
+              <div className="flex-1 basis-1/3">
               <motion.div
               whileHover={{scale: 1.1, rotate: 3 }}
               whileTap={{ scale: 0.8, rotate: -10, borderRadius: "100%" }}
@@ -255,10 +259,10 @@ export default function Home() {
           </section>
 
           {/* footer */}
-          <footer className="flex flex-col items-center justify-center gap-5 py-10 text-sm border-t-2 border-black  opacity-70 lg:flex-row lg:items-center dark:border-white">
+          <footer className="flex flex-col items-center justify-center gap-5 py-10 text-sm border-t-2 border-black opacity-70 lg:flex-row lg:items-center dark:border-white">
             <div>
-              <h3 className="mb-2 text-base  dark:text-white">contact me for more details</h3>
-              <p className="text-gray-500  dark:text-white">Connect with me on social media for updates, projects, and collaborations. Find me on social media, where I share insights and behind-the-scenes content. Let’s stay in touch and grow our network!</p>
+              <h3 className="mb-2 text-base dark:text-white">contact me for more details</h3>
+              <p className="text-gray-500 dark:text-white">Connect with me on social media for updates, projects, and collaborations. Find me on social media, where I share insights and behind-the-scenes content. Let’s stay in touch and grow our network!</p>
             </div>
             <div>
               {/* socials */}
