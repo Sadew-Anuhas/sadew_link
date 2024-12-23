@@ -43,42 +43,42 @@ export default function Home() {
         </style>
       </Head>
 
-        <main className="font-poppins bg-yellow-50 min-h-screen px-10 md:px-20 lg-px-40 dark:bg-gray-900">
+        <main className="min-h-screen px-10 font-poppins bg-yellow-50 md:px-20 lg-px-40 dark:bg-gray-900">
           {/* nav and hero */}
           <section>
             {/* nav */}
-            <nav className="py-10 flex justify-between">
-              <h1 className=" text-sm md:text-xl dark:text-white">Developed by Sadew</h1>
-              <ul className=" flex items-center">
+            <nav className="flex justify-between py-10">
+              <h1 className="text-sm  md:text-xl dark:text-white">Developed by Sadew</h1>
+              <ul className="flex items-center ">
                 {/* icon */}
                 <li>
                 {darkMode ? (
                   <FaSun
                     onClick={() => setDarkMode(!darkMode)}
-                    className="cursor-pointer text-xl mx-5 text-white" />
+                    className="mx-5 text-xl text-white cursor-pointer" />
                 ) : (
                   <BsFillMoonStarsFill
                     onClick={() => setDarkMode(!darkMode)}
-                    className="cursor-pointer text-xl mx-5 text-black" />
+                    className="mx-5 text-xl text-black cursor-pointer" />
                 )}
               </li>
                 <li>
                   <a
-                  href=""
-                  className=" bg-black text-white px-4 py-2 border-none rounded-md dark:text-black dark:bg-white"
+                  href=" "
+                  className="px-4 py-2 text-white bg-black border-none rounded-md  dark:text-black dark:bg-white"
                   >Subscribe</a>
                 </li>
               </ul>
             </nav>
 
             {/* hero */}
-            <div className="text-center p-10">
+            <div className="p-10 text-center">
               <h1 className="text-5xl font-bold text-yellow-400 md:text-6xl lg:text-7xl lg:mb-4">Sadew Anuhas</h1>
-              <h3 className=" text-2xl py-4 md:text-3xl dark:text-white">Web Designer & Developer</h3>
-              <p className="font-sm text-gray-400 leading-6 max-w-xl mx-auto md:text-md">A versatile creative professional with over 5 years of experience in Graphic Design, Web Design, UI/UX, Video Editing, and Full-Stack Development. I specialize in crafting visually stunning and user-friendly digital experiences that bring ideas to life.</p>
+              <h3 className="py-4 text-2xl  md:text-3xl dark:text-white">Web Designer & Developer</h3>
+              <p className="max-w-xl mx-auto leading-6 text-gray-400 font-sm md:text-md">A versatile creative professional with over 5 years of experience in Graphic Design, Web Design, UI/UX, Video Editing, and Full-Stack Development. I specialize in crafting visually stunning and user-friendly digital experiences that bring ideas to life.</p>
             </div>
             {/* socials */}
-            <div className="text-5xl flex justify-center gap-16 text-gray-600">
+            <div className="flex justify-center gap-16 text-5xl text-gray-600">
               <a href="https://whatsapp.com/">
                 <MdWhatsapp/>
               </a>
@@ -95,7 +95,7 @@ export default function Home() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
             >
-              <div className=" m-auto relative bg-gradient-to-b from-yellow-200 w-80 h-80 p-5   mt-20 rounded-full">
+              <div className="relative p-5 m-auto mt-20 rounded-full  bg-gradient-to-b from-yellow-200 w-80 h-80">
                <Image src={profileImage}
                alt="profile image"
                layout="fill"
@@ -106,26 +106,26 @@ export default function Home() {
           {/* services */}
           <section>
             <div>
-              <h2 className=" text-5xl py-2 font-bold opacity-60 dark:text-white">Services I Offer</h2>
-              <p className="font-sm text-gray-400 leading-6 dark:text-white">I provide high-quality, tailored solutions to meet your unique needs, combining creativity, technical expertise, and a passion for excellence.</p>
+              <h2 className="py-2 text-5xl font-bold  opacity-60 dark:text-white">Services I Offer</h2>
+              <p className="leading-6 text-gray-400 font-sm dark:text-white">I provide high-quality, tailored solutions to meet your unique needs, combining creativity, technical expertise, and a passion for excellence.</p>
             </div>
 
             {/* Services Cards */}
-            <div className=" md:flex lg:flex gap-10 mx-auto">
+            <div className="gap-10 mx-auto  md:flex lg:flex">
               {/* card */}
               <motion.div
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               >
-              <div className=" bg-yellow-300 text-center shadow-sm p-5 rounded-xl my-10">
+              <div className="p-5 my-10 text-center bg-yellow-300 shadow-sm  rounded-xl">
                 <Image src={graphicDesign}
                 alt="design image"
                 width={100}
                 height={100}
-                className=" inline"
+                className="inline "
                 />
-                <h2 className=" text-2xl font-bold">Graphic Design</h2>
-                <p className=" text-sm py-2 text-gray-800 leading-6">Elevate your brand with striking logos, brochures, and social media designs that drive engagement.</p>
+                <h2 className="text-2xl font-bold ">Graphic Design</h2>
+                <p className="py-2 text-sm leading-6 text-gray-800 ">Elevate your brand with striking logos, brochures, and social media designs that drive engagement.</p>
               </div>
               </motion.div>
 
@@ -134,15 +134,15 @@ export default function Home() {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               >
-              <div className=" bg-yellow-300 text-center shadow-sm p-5 rounded-xl my-10">
+              <div className="p-5 my-10 text-center bg-yellow-300 shadow-sm  rounded-xl">
                 <Image src={codeImage}
                 alt="code image"
                 width={100}
                 height={100}
-                className=" inline"
+                className="inline "
                 />
-                <h2 className=" text-2xl font-bold">Web Design</h2>
-                <p className=" text-sm py-2 text-gray-800 leading-6">Build responsive, custom Websites tailored to your brand and goals.</p>
+                <h2 className="text-2xl font-bold ">Web Design</h2>
+                <p className="py-2 text-sm leading-6 text-gray-800 ">Build responsive, custom Websites tailored to your brand and goals.</p>
               </div>
               </motion.div>
 
@@ -151,15 +151,15 @@ export default function Home() {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               >
-              <div className=" bg-yellow-300 text-center shadow-sm p-5 rounded-xl my-10">
+              <div className="p-5 my-10 text-center bg-yellow-300 shadow-sm  rounded-xl">
                 <Image src={graphicDesign}
                 alt="design image"
                 width={100}
                 height={100}
-                className=" inline"
+                className="inline "
                 />
-                <h2 className=" text-2xl font-bold">UI/UX Design</h2>
-                <p className=" text-sm py-2 text-gray-800 leading-6">Design intuitive, engaging UI/UX with Figma for web and mobile apps.</p>
+                <h2 className="text-2xl font-bold ">UI/UX Design</h2>
+                <p className="py-2 text-sm leading-6 text-gray-800 ">Design intuitive, engaging UI/UX with Figma for web and mobile apps.</p>
               </div>
               </motion.div>
             </div>
@@ -168,12 +168,12 @@ export default function Home() {
           {/* my work */}
           <section>
             <div>
-              <h2 className=" text-5xl py-2 font-bold opacity-60 dark:text-white">Portfolio</h2>
-              <p className="font-sm text-gray-400 leading-6 dark:text-white">Explore a curated collection of my previous projects showcasing my design and development expertise, delivering creative solutions tailored to my clients' goals.</p>
+              <h2 className="py-2 text-5xl font-bold  opacity-60 dark:text-white">Portfolio</h2>
+              <p className="leading-6 text-gray-400 font-sm dark:text-white">Explore a curated collection of my previous projects showcasing my design and development expertise, delivering creative solutions tailored to my clients' goals.</p>
             </div>
             {/* images */}
-            <div className=" flex flex-col gap-10 p-10 lg:flex-row lg:flex-wrap">
-              <div className=" basis-1/3 flex-1">
+            <div className="flex flex-col gap-10 p-10  lg:flex-row lg:flex-wrap">
+              <div className="flex-1  basis-1/3">
               <motion.div
               whileHover={{scale: 1.1, rotate: 3 }}
               whileTap={{ scale: 0.8, rotate: -10, borderRadius: "100%" }}
@@ -182,11 +182,11 @@ export default function Home() {
                 src={image1}
                 alt="image 1"
                 layout="responsive"
-                className=" rounded-lg object-cover"
+                className="object-cover rounded-lg "
                 />
               </motion.div>
               </div>
-              <div className=" basis-1/3 flex-1">
+              <div className="flex-1  basis-1/3">
               <motion.div
               whileHover={{scale: 1.1, rotate: 3 }}
               whileTap={{ scale: 0.8, rotate: -10, borderRadius: "100%" }}
@@ -195,11 +195,11 @@ export default function Home() {
                 src={image2}
                 alt="image 1"
                 layout="responsive"
-                className=" rounded-lg object-cover"
+                className="object-cover rounded-lg "
                 />
               </motion.div>
               </div>
-              <div className=" basis-1/3 flex-1">
+              <div className="flex-1  basis-1/3">
               <motion.div
               whileHover={{scale: 1.1, rotate: 3 }}
               whileTap={{ scale: 0.8, rotate: -10, borderRadius: "100%" }}
@@ -208,11 +208,11 @@ export default function Home() {
                 src={image1}
                 alt="image 1"
                 layout="responsive"
-                className=" rounded-lg object-cover"
+                className="object-cover rounded-lg "
                 />
                 </motion.div>
               </div>
-              <div className=" basis-1/3 flex-1">
+              <div className="flex-1  basis-1/3">
               <motion.div
               whileHover={{scale: 1.1, rotate: 3 }}
               whileTap={{ scale: 0.8, rotate: -10, borderRadius: "100%" }}
@@ -221,11 +221,11 @@ export default function Home() {
                 src={image2}
                 alt="image 1"
                 layout="responsive"
-                className=" rounded-lg object-cover"
+                className="object-cover rounded-lg "
                 />
               </motion.div>
               </div>
-              <div className=" basis-1/3 flex-1">
+              <div className="flex-1  basis-1/3">
               <motion.div
               whileHover={{scale: 1.1, rotate: 3 }}
               whileTap={{ scale: 0.8, rotate: -10, borderRadius: "100%" }}
@@ -234,11 +234,11 @@ export default function Home() {
                 src={image3}
                 alt="image 1"
                 layout="responsive"
-                className=" rounded-lg object-cover"
+                className="object-cover rounded-lg "
                 />
               </motion.div>
               </div>
-              <div className=" basis-1/3 flex-1">
+              <div className="flex-1  basis-1/3">
               <motion.div
               whileHover={{scale: 1.1, rotate: 3 }}
               whileTap={{ scale: 0.8, rotate: -10, borderRadius: "100%" }}
@@ -247,7 +247,7 @@ export default function Home() {
                 src={image1}
                 alt="image 1"
                 layout="responsive"
-                className=" rounded-lg object-cover"
+                className="object-cover rounded-lg "
                 />
               </motion.div>
               </div>
@@ -255,14 +255,14 @@ export default function Home() {
           </section>
 
           {/* footer */}
-          <footer className=" border-t-2 border-black text-sm opacity-70 flex flex-col gap-5 items-center justify-center py-10 lg:flex-row lg:items-center dark:border-white">
+          <footer className="flex flex-col items-center justify-center gap-5 py-10 text-sm border-t-2 border-black  opacity-70 lg:flex-row lg:items-center dark:border-white">
             <div>
-              <h3 className=" text-base mb-2 dark:text-white">contact me for more details</h3>
-              <p className=" text-gray-500 dark:text-white">Connect with me on social media for updates, projects, and collaborations. Find me on social media, where I share insights and behind-the-scenes content. Let’s stay in touch and grow our network!</p>
+              <h3 className="mb-2 text-base  dark:text-white">contact me for more details</h3>
+              <p className="text-gray-500  dark:text-white">Connect with me on social media for updates, projects, and collaborations. Find me on social media, where I share insights and behind-the-scenes content. Let’s stay in touch and grow our network!</p>
             </div>
             <div>
               {/* socials */}
-              <div className="text-5xl flex justify-center gap-16 text-gray-600 dark:text-white">
+              <div className="flex justify-center gap-16 text-5xl text-gray-600 dark:text-white">
                 <a href="https://whatsapp.com/">
                   <MdWhatsapp/>
                 </a>
