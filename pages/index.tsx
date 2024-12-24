@@ -47,7 +47,7 @@ export default function Home() {
       </Head>
 
         <main className="min-h-screen px-10 bg-gray-100 font-poppins md:px-20 lg-px-40 dark:bg-gray-900">
-        <SnowEffect snowflakeCount={20} />
+        <SnowEffect snowflakeCount={100} />
           {/* nav and hero */}
           <section>
             {/* nav */}
